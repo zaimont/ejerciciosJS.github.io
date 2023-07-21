@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+   
+    <title>Área de un triángulo</title>
+    <script>
+        function calcularArea() {
+            var base = parseFloat(document.getElementById("base").value);
+            var altura = parseFloat(document.getElementById("altura").value);
+
+            // Calcular el área del triángulo
+            var area = (base * altura) / 2;
+
+            // Mostrar el resultado en el elemento con el id "resultado"
+            document.getElementById("resultado").innerHTML = "El área del triángulo es: " + area;
+        }
+    </script>
+     <link rel="stylesheet" href="estilo.css">
+     <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.css" rel="stylesheet" />
+
+    <!-- MDB -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <!-- Container wrapper -->
+        <div class="container-fluid">
+          <!-- Toggle button -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-mdb-toggle="collapse"
+            data-mdb-target="#navbarCenteredExample"
+            aria-controls="navbarCenteredExample"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="fas fa-bars"></i>
+          </button>
+      
+          <!-- Collapsible wrapper -->
+          <div
+            class="collapse navbar-collapse justify-content-center"
+            id="navbarCenteredExample"
+          >
+            <!-- Left links -->
+            <ul class="navbar-nav mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://linktr.ee/zaimont">Linktree</a>
+              </li>
+            <!-- Left links -->
+          </div>
+          <!-- Collapsible wrapper -->
+        </div>
+        <!-- Container wrapper -->
+      </nav>
+
+    <br>
+    <div class="triangulo">
+    <h1 >Área de un triángulo</h1>
+    </div>
+    <br>
+    <div class="info">
+    
+    <p>Ingrese la base del triángulo:</p>
+    <br><br>
+    <input type="number" id="base" />
+    <br>
+    <p>Ingrese la altura del triángulo:</p>
+    <input type="number" id="altura" />
+    <button onclick="calcularArea()">Calcular</button>
+    <p id="resultado"></p>
+    </div>
+</body>
+</html>

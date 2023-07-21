@@ -1,0 +1,139 @@
+.titulo{
+    font-size: 50px;
+}
+
+
+
+.info{
+      display: flex; /*activamos el modelo de caja flexible*/
+      justify-content: center; /*centra horizontalmente los elementos*/
+      align-items: center; /*centra verticalmente los elementos*/
+      width: 30em;
+      height: 10em ; /*establecemos una altura para el contenedor*/
+      border: 2px solid rgb(247, 247, 247);
+      margin: auto; /*centra horizontalmente el contenedor*/
+      /*si no agrego el margin:auto; el div se movera a la derecha por efecto del modelo caja
+      y el posicionamiento determinado de los elementos css
+      */
+      border-radius: 20px;
+      font-size: 15px;
+      width: 100%;
+      height: 100%;
+      background-color: rgb(6, 5, 5);
+      color:white;
+      font-family: cursive;
+}
+
+
+
+.contenedor {
+    display: grid; /* Activa el modelo de grid */
+    grid-template-columns: repeat(3, 1fr); /* Define 3 columnas iguales */
+    grid-gap: 1em; /* Espacio entre las celdas */
+    margin-left: 6em;
+    
+    
+  }
+
+  .item {
+    background-color: #ccc;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .btn{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    adding: 10px 20px;
+    background-color: #25282e;
+    border: none;
+    border-radius: 5px;
+    color:#ffffff;
+  }
+
+  .imagen{
+    width: 300%;
+    height: 300%;
+  }
+
+ /* Para dispositivos móviles */
+@media (max-width: 767px) {
+  .contenedor {
+    grid-template-columns: 1fr; /* Una sola columna */
+  }
+}
+
+/* Para tabletas */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .contenedor {
+    grid-template-columns: 1fr 1fr; /* Dos columnas */
+  }
+}
+
+/* Para ordenadores */
+@media (min-width: 1024px) {
+  .contenedor {
+    grid-template-columns: 1fr 1fr 1fr; /* Tres columnas iguales */
+  }
+}
+
+/* Estilos para el botón de regresar arriba */
+.boton-arriba {
+  display: none; /* Ocultar el botón por defecto */
+  position: fixed; /* Posición fija en la ventana */
+  bottom: 20px; /* Distancia desde la parte inferior */
+  right: 20px; /* Distancia desde la parte derecha */
+  z-index: 99; /* Capa superior */
+  background-color: #eaeaea; /* Color de fondo */
+  color: #333; /* Color del texto */
+  padding: 10px 15px; /* Espaciado interno */
+  border-radius: 15px; /* Bordes redondeados */
+  text-decoration: none; /* Sin subrayado */
+}
+
+/* Mostrar el botón cuando se aplique la clase "show" */
+.boton-arriba.show {
+  display: inline-block;
+}
+
+/* Estilos para el div en general */
+.p-5 {
+  padding: 5px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.bg-image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Media queries para diferentes tamaños de pantalla */
+@media (max-width: 767px) {
+  /* Estilos para dispositivos móviles */
+  .bg-image {
+    height: 200px; /* Ajusta la altura para dispositivos móviles */
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* Estilos para tablets */
+  .bg-image {
+    height: 300px; /* Ajusta la altura para tablets */
+  }
+}
+
+@media (min-width: 992px) {
+  /* Estilos para ordenadores */
+  .bg-image {
+    height: 400px; /* Ajusta la altura para ordenadores */
+  }
+}
+
+
+
+

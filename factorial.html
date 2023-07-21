@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+  <!-- MDB -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.css" rel="stylesheet" />
+
+  <!-- MDB -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <script>
+        function calcularFactorial() {
+            var numero = parseInt(document.getElementById("numero").value);
+            var factorial = 1;
+            // la iniciamos con 1. Esta variable se utilizará para almacenar el resultado del cálculo del factorial.
+           
+
+            for (var i = 1; i <= numero; i++) {
+                factorial *= i;
+               // recorre los números desde 1 hasta el valor de numero. 
+               //En cada iteración, se multiplica el valor actual de factorial por el valor de i y 
+               //se actualiza el valor de factorial.}
+
+            document.getElementById("resultado").textContent = "El factorial de " + numero + " es: " + factorial;
+        //aqui concatena para mostrar el resultado 
+          }
+        }
+    </script>
+    <title>Document</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <!-- Container wrapper -->
+        <div class="container-fluid">
+          <!-- Toggle button -->
+          <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarCenteredExample"
+            aria-controls="navbarCenteredExample" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+          </button>
+    
+          <!-- Collapsible wrapper -->
+          <div class="collapse navbar-collapse justify-content-center" id="navbarCenteredExample">
+            <!-- Left links -->
+            <ul class="navbar-nav mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://linktr.ee/zaimont">Linktree</a>
+              </li>
+              <!-- Left links -->
+          </div>
+          <!-- Collapsible wrapper -->
+        </div>
+        <!-- Container wrapper -->
+      </nav>
+
+
+    <div class="triangulo">
+    <h1 class="title">Factorial de un número</h1>
+    </div>
+
+    <div class="info">
+    <label for="numero">Ingresa un número:</label>
+    <input type="number" id="numero">
+
+    <button onclick="calcularFactorial()">Calcular</button>
+
+    <p id="resultado"></p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,97 @@
+ body{
+    font-family: cursive;
+    background-color: rgb(246, 240, 240);
+}
+
+button{
+    background-color: blueviolet;
+    font-family: cursive;
+    font-size: large;
+    border-radius: 10px;
+}
+
+button:hover{
+    background-color: rgb(180, 65, 167);
+}
+
+.titulo{
+    font-size: 50px;
+} 
+
+.info{
+    display: flex; /*activamos el modelo de caja flexible*/
+    justify-content: center; /*centra horizontalmente los elementos*/
+    align-items: center; /*centra verticalmente los elementos*/
+    width: 50em;
+    height: 15em ; /*establecemos una altura para el contenedor*/
+    border: 2px solid black;
+    margin: auto; /*centra horizontalmente el contenedor*/
+    /*si no agrego el margin:auto; el div se movera a la derecha por efecto del modelo caja
+    y el posicionamiento determinado de los elementos css
+    */
+    border-radius: 20px;
+    font-family: cursive;
+    background-color: rgb(6, 6, 6);
+    color: white;
+
+    
+}
+
+.triangulo{
+    display: flex; /*activamos el modelo de caja flexible*/
+    justify-content: center; /*centra horizontalmente los elementos*/
+    align-items: center; /*centra verticalmente los elementos*/
+    width: 10em;
+    height: 5em ; /*establecemos una altura para el contenedor*/
+    
+    margin: auto; /*centra horizontalmente el contenedor*/
+    /*si no agrego el margin:auto; el div se movera a la derecha por efecto del modelo caja
+    y el posicionamiento determinado de los elementos css
+    */
+    font-size: 24px;
+    font-family: cursive;
+    color: black;
+    border-radius: 15rem;
+}
+
+
+
+.vocales{
+    display: flex; /*activamos el modelo de caja flexible*/
+    justify-content: center; /*centra horizontalmente los elementos*/
+    align-items: center; /*centra verticalmente los elementos*/
+    width: 10em;
+    height: 5em ; /*establecemos una altura para el contenedor*/
+    
+    margin: auto; /*centra horizontalmente el contenedor*/
+    /*si no agrego el margin:auto; el div se movera a la derecha por efecto del modelo caja
+    y el posicionamiento determinado de los elementos css
+    */
+    font-size: 10px;
+    color: black;
+    border-radius: 15rem;
+}
+
+.title{
+    text-align: center;
+  font-size: 24px;
+}
+
+.ordenNum{
+    display: flex; /*activamos el modelo de caja flexible*/
+    justify-content: center; /*centra horizontalmente los elementos*/
+    align-items: center; /*centra verticalmente los elementos*/
+    width: 75em;
+    height: 15em ; /*establecemos una altura para el contenedor*/
+    border: 2px solid black;
+    margin: auto; /*centra horizontalmente el contenedor*/
+    /*si no agrego el margin:auto; el div se movera a la derecha por efecto del modelo caja
+    y el posicionamiento determinado de los elementos css
+    */
+    border-radius: 20px;
+    font-family: cursive;
+    background-color: rgb(10, 10, 9);
+    color: white;
+}
+
+/* //gap da espacio entre elementos del grid solo funciona con gird */

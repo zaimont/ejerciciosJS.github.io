@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="estilo.css">
+  <title>Contador de Vocales</title>
+  <script>
+    function contarVocales() {
+      var frase = document.getElementById('inputFrase').value.toLowerCase();
+      var contadorA = 0;
+      var contadorE = 0;
+      var contadorI = 0;
+      var contadorO = 0;
+      var contadorU = 0;
+
+      for (var i = 0; i < frase.length; i++) {
+        var letra = frase[i];
+
+        switch (letra) {
+          case 'a':
+            contadorA++;
+            break;
+          case 'e':
+            contadorE++;
+            break;
+          case 'i':
+            contadorI++;
+            break;
+          case 'o':
+            contadorO++;
+            break;
+          case 'u':
+            contadorU++;
+            break;
+        }
+      }
+
+      document.getElementById('resultadoA').innerHTML = "Cantidad de 'a': " + contadorA;
+      document.getElementById('resultadoE').innerHTML = "Cantidad de 'e': " + contadorE;
+      document.getElementById('resultadoI').innerHTML = "Cantidad de 'i': " + contadorI;
+      document.getElementById('resultadoO').innerHTML = "Cantidad de 'o': " + contadorO;
+      document.getElementById('resultadoU').innerHTML = "Cantidad de 'u': " + contadorU;
+    }
+  </script>
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+  <!-- MDB -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.css" rel="stylesheet" />
+
+  <!-- MDB -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+</head>
+<body>
+
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!-- Container wrapper -->
+    <div class="container-fluid">
+      <!-- Toggle button -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-mdb-toggle="collapse"
+        data-mdb-target="#navbarCenteredExample"
+        aria-controls="navbarCenteredExample"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
+  
+      <!-- Collapsible wrapper -->
+      <div
+        class="collapse navbar-collapse justify-content-center"
+        id="navbarCenteredExample"
+      >
+        <!-- Left links -->
+        <ul class="navbar-nav mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://linktr.ee/zaimont">Linktree</a>
+          </li>
+        <!-- Left links -->
+      </div>
+      <!-- Collapsible wrapper -->
+    </div>
+    <!-- Container wrapper -->
+  </nav>
+
+
+  <br>
+  <div class="triangulo">
+  <h3 >Contador de Vocales</h3>
+</div>
+<br>
+<div class="info">
+  <p>Ingrese una frase:</p>
+  <input type="text" id="inputFrase">
+  <button onclick="contarVocales()">Contar</button>
+  <p id="resultadoA"></p>
+  <p id="resultadoE"></p>
+  <p id="resultadoI"></p>
+  <p id="resultadoO"></p>
+  <p id="resultadoU"></p>
+</div>
+</body>
+</html>

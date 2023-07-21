@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="estilo.css">
+  <title> Divisibicible</title>
+  <script>
+    function verificarDivisibilidad() {
+      var numero = parseInt(document.getElementById('inputNumero').value);
+      // obtiene el valor del elemento de entrada con el id "inputNumero" y lo convierte en un número entero utilizando la función parseInt(). El valor se asigna a la variable numero.
+      var resultados = [];
+      //se coloca [] para almacenar los resultados de la verificacion
+
+      if (numero % 2 === 0) {
+        resultados.push("Es divisible por 2");
+      }
+      if (numero % 3 === 0) {
+        resultados.push("Es divisible por 3");
+      }
+      if (numero % 4 === 0) {
+        resultados.push("Es divisible por 4");
+      }
+      if (numero % 5 === 0) {
+        resultados.push("Es divisible por 5");
+      }
+
+      if (resultados.length === 0) {
+        document.getElementById('resultado').innerHTML = "El número no es divisible por 2, 3, 4 ni 5";
+      } else {
+        document.getElementById('resultado').innerHTML = resultados.join(', ');
+      }
+    }
+    // verifican si el número ingresado es divisible por 2, 3, 4 o 5 utilizando el operador de módulo %. 
+    //Si el residuo de la división es cero, significa que el número es divisible y se agrega un mensaje correspondiente a la matriz 
+
+  </script>
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+  <!-- MDB -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.css" rel="stylesheet" />
+
+  <!-- MDB -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!-- Container wrapper -->
+    <div class="container-fluid">
+      <!-- Toggle button -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-mdb-toggle="collapse"
+        data-mdb-target="#navbarCenteredExample"
+        aria-controls="navbarCenteredExample"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
+  
+      <!-- Collapsible wrapper -->
+      <div
+        class="collapse navbar-collapse justify-content-center"
+        id="navbarCenteredExample"
+      >
+        <!-- Left links -->
+        <ul class="navbar-nav mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://linktr.ee/zaimont">Linktree</a>
+          </li>
+        <!-- Left links -->
+      </div>
+      <!-- Collapsible wrapper -->
+    </div>
+    <!-- Container wrapper -->
+  </nav>
+
+    <br>
+    <div class="triangulo">
+  <h1 class="title">Verificador de Divisibilidad</h1>
+    </div>
+<br>
+  <div class="info">
+  <p>Ingrese un número:</p>
+  <input type="number" id="inputNumero">
+  <button onclick="verificarDivisibilidad()">Verificar</button>
+  <p id="resultado"></p>
+</div>
+</body>
+</html>

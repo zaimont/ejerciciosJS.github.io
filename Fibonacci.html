@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="estilo.css">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html>
+
+    <head>
+        <title>Fibonacci</title>
+        <script>
+            function calcularFibonacci() {
+                var limite = parseInt(document.getElementById("limite").value);
+                var resultado = "";
+              //  Estas variables representan los dos primeros números de la secuencia de Fibonacci.
+                var num1 = 0, num2 = 1;
+                
+                // Mostrar los primeros dos números de la serie
+                resultado += num1 + ", " + num2 + ", ";
+
+                // Calcular y mostrar los siguientes números de la serie
+                for (var i = 3; i <= limite; i++) {  //i++ en cada iteracion del bucle se calculan los numeros subsiguientes de la secuencia
+                    var num3 = num1 + num2;
+                    resultado += num3 + ", ";
+                    num1 = num2;
+                    num2 = num3;
+                }
+
+                // Mostrar el resultado en el elemento con el id "resultado"
+                document.getElementById("resultado").innerHTML = resultado;
+            }
+        </script>
+        <!-- Font Awesome -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+        <!-- MDB -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.css" rel="stylesheet" />
+
+        <!-- MDB -->
+        <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    </head>
+
+    <body>
+
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <!-- Container wrapper -->
+            <div class="container-fluid">
+              <!-- Toggle button -->
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-mdb-toggle="collapse"
+                data-mdb-target="#navbarCenteredExample"
+                aria-controls="navbarCenteredExample"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <i class="fas fa-bars"></i>
+              </button>
+          
+              <!-- Collapsible wrapper -->
+              <div
+                class="collapse navbar-collapse justify-content-center"
+                id="navbarCenteredExample"
+              >
+                <!-- Left links -->
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="https://linktr.ee/zaimont">Linktree</a>
+                  </li>
+                <!-- Left links -->
+              </div>
+              <!-- Collapsible wrapper -->
+            </div>
+            <!-- Container wrapper -->
+          </nav>
+
+        <div class="triangulo">
+            <h1>Serie de Fibonacci</h1>
+        </div>
+        <br>
+        <div class="info">
+            <p>Ingrese el límite de la serie:</p>
+            <input type="number" id="limite" />
+            <button onclick="calcularFibonacci()">Calcular</button>
+            <p id="resultado"></p>
+        </div>
+    </body>
+
+    </html>
+
+</body>
+
+</html>
